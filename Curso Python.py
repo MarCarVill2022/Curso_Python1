@@ -1,5 +1,5 @@
 """ 
-Este es un curso python para principiantes 
+Este es un curso de python para principiantes 
 """
 
 
@@ -11,15 +11,15 @@ saludo = "hola mundo"
 print(saludo)
 
 #INT o numeros enteros
-edad=42
+edad = 42
 print(edad)
 
 #FLOAT es para numeros decimales
-PI = 3,14159
-print(PI)
+pi = 3,14159
+print(pi)
 
 #Valor (BOOL) BOOLEANO  True or False
-valor_booleano=True
+valor_booleano = True
 
 #Palabras reservadas de Python
 import keyword
@@ -64,25 +64,25 @@ Divisor es el numero por el que vamos a dividir
 Cociente es el resultado
 Resto es el numero que queda de residuo en la division
 """
-operacionA=10/3
-operacionB=10%3
-operacionC=10//3
+operacionA = 10/3
+operacionB = 10%3
+operacionC = 10//3
 
 print(operacionA, operacionB, operacionC)
 
 #operador de potencias
-operacion=2**3
+operacion = 2**3
 print(operacion)
 
 #operador con prioridad de calculo, esto se hace con parentesis
-operacionA=10+6*2 #22
-operacionB=(10+6)*2 #32
+operacionA = 10+6*2 #22
+operacionB = (10+6)*2 #32
 print(operacionA) 
 print(operacionB)
 
 #se puede usar "_" para separar sin que python lo interprete
 
-variable=123_456_789
+variable = 123_456_789
 print(variable)
 
 
@@ -92,7 +92,7 @@ Es la forma de unir o mejor dicho de añadir un string
  a otro"""
 frase1="soñando que estamos despiertos, "
 frase2="seguimos durmiendo."
-frase_completa=frase1+frase2
+frase_completa = frase1+frase2
 
 print(frase_completa)
 
@@ -106,11 +106,11 @@ como vemos ha hecho una concatenacion y puesto
 los espacios donde corresponde"""
 
 #La funcion input se usa para ingresar datos.
-nombre=input("ingresa tu nombre:")
+nombre = input("ingresa tu nombre:")
 
 """en consola nos aprecera ingresa tu nombre y podremos 
 escribir nuestros datos en este caso el nombre, que se 
-guardara en sistema comop un str."""
+guardara en sistema como un str."""
 
 
 print(nombre)
@@ -121,14 +121,15 @@ print(nombre)
 #Introduccion a las listas
 """Las listas se usan para almacenar una coleccion ordenada
 de elementos. pueden ser numeros, str, booleanos e incluso
-otras listas"""
+otras listas.
+Se podria decir que las list son un conjunto de variables"""
 
-color="rojo"
-talla="L"
-precio=100
-cantidad=10
+color = "rojo"
+talla = "L"
+precio = 100
+cantidad = 10
  
-camiseta=["rojo","L",100,10]
+camiseta = ["rojo","L",100,10]
 #en este print nos tira error porque no se puede concatenar un str con una list
 # print("esta es una lista" + camiseta)
 #la solucion es no concatenar y separar en el print el str de la list por una ,
@@ -158,34 +159,34 @@ print('"era un lujo" me dijo')
 #Empezando siempre por 0,1,2,3,4,5,etc.
 #Se puede cambiar los elementos temporalmente por posicion
 
-colores=["azul","amarillo","rojo"]
-colores[0]="verde"
+colores = ["azul","amarillo","rojo"]
+colores[0] = "verde"
 print(colores) 
 
 #Con el method append podcremos agregar un elemento a la list
 #Este elemento se agregara al final de la list
-colores=["rojo","verde","azul"]
+colores = ["rojo","verde","azul"]
 colores.append("amarillo")
 print(colores)
 
 """#Con el method insert podremos agregar un elemento a la list 
 en la posicion que querramos"""
 
-colores=["rojo","verde","amarillo"]
+colores = ["rojo","verde","amarillo"]
 colores.insert(0,"azul")
 print(colores)
  
 """#El method extend sirve para extender una list
  con un elemento o varios iterables"""
 
-colores1=["rojo","azul","verde"]
-colores2=["amarillo","violeta","naranja"]
+colores1 = ["rojo","azul","verde"]
+colores2 = ["amarillo","violeta","naranja"]
 colores1.extend(colores2)
 print(colores1)
 
 #El method pop se usa para eliminar elementos de una list
 #Entre los () vamos a poner la posicion que queremos eliminar
-colores=["rojo","verde","azul"]
+colores = ["rojo","verde","azul"]
 colores.pop(1)
 print(colores)
 
@@ -193,7 +194,7 @@ print(colores)
 #Entre los() pondremos el valor literal, no la posicion
 #En caso de que un elemento este repetido no borrara todos solo el primero
 
-colores=["rojo","verde","azul"]
+colores = ["rojo","verde","azul"]
 colores.remove("verde")
 print(colores)
 
@@ -201,15 +202,15 @@ print(colores)
 #Nos arrojara como resultado el numero de la posicion en la que esta
 #Si el elemento se repite en la list solo nos dira la posicion del primer elemento que aparezca
 
-colores=["rojo","amarillo","verde"]
+colores = ["rojo","amarillo","verde"]
 busca_color=colores.index("amarillo")
 print(busca_color)
 
 #El method count tambien busca elementos en la list
 #Pero nos dira cuantas veces aparece en la list
 
-numeros=[1, 10, 80, 10, 56, 10]
-valor_busqueda=10 
+numeros = [1, 10, 80, 10, 56, 10]
+valor_busqueda = 10 
 coincidencias = numeros.count(valor_busqueda)
 print(coincidencias)
 
@@ -248,8 +249,11 @@ print(tupla[1])
 
 #si se pueden usar method de lectura
 #method index
+
 print(tupla.index("rojo"))
+
 #method  count
+
 print(tupla.count("rojo"))
 
 
@@ -309,8 +313,7 @@ print(frase_lower)
 
 camiseta = { "color" : "rojo", "talle" : "L", "precio" : "100", "unidades" : "10", }
 
-#llamar a valor de diccionario
-#se usan [] para llamar el valor
+#Para llamar a valor de diccionario se usan []
 
 dato_obtenido = camiseta["color"]
 
